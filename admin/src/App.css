@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #fff0db;
+}
+
+.form-container,
+.login-form,
+.register-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; 
+  margin: 0;
+  padding: 2rem; 
+  background-color: #fff0db;
+}
+
+.login-form {
+  padding-top: 50px;
+  margin-top: -2rem;
+}
+
+h2 {
+  padding-top: 1rem;
+}
+
+label {
+  text-align: left;
+  padding: 0.25rem 0;
+  transition: color 0.3s, transform 0.3s; 
+}
+
+/* Smoothly move the label up slightly when input is focused */
+input:focus ~ label {
+  color: #8489eb;
+  transform: translateY(-8px);
+}
+
+input {
+  margin: 0.5rem 0;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  color: black;
+  transition: border-color 0.3s, box-shadow 0.3s; 
+}
+
+input:focus {
+  border-color: #8489eb;
+  outline: none;
+  box-shadow: 0px 0px 10px rgba(117, 122, 224, 0.795);
+}
+
+button {
+  border: none;
+  background-color: #8489eb;
+  padding: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.link-button {
+  background: none;
+  text-decoration: underline;
+  color: rgb(240, 240, 240);
+  letter-spacing: 0px;
+  transition: color 0.3s; 
+}
+
+.link-button:hover {
+  color: red; 
+}
+
+.box {
+  padding: 4rem;
+  background-color: rgba(5, 3, 3, 0.288);
+  border-radius: 5px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); 
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+  .form-container {
+    margin: 6rem 1rem;
+    padding: 2rem;
+  }
+
+  .box {
+    padding: 2rem;
+  }
+}
+
+.login-logo {
+  width: 15rem;
+  height: 13rem;
+  margin: 0 auto;
+  display: block;
+}
+
+/* Define the transition */
+.fade-enter {
+  opacity: 0;
+  transform: translateY(20px);
+}
+.fade-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 300ms, transform 300ms;
+}
+.fade-exit {
+  opacity: 1;
+}
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 300ms;
+}
